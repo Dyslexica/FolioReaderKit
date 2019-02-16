@@ -53,7 +53,7 @@ function setFontName(cls) {
     removeClass(elm, "andada");
     removeClass(elm, "lato");
     removeClass(elm, "lora");
-    removeClass(elm, "raleway");
+    removeClass(elm, "opendyslexic");
     addClass(elm, cls);
 }
 
