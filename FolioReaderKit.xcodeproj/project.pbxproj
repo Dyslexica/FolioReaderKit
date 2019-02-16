@@ -102,6 +102,28 @@
 		3A27F0C71FD9C33A00D84A57 /* Highlight+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A958F211D397BE900D56699 /* Highlight+Helper.swift */; };
 		3A27F0C81FD9C33A00D84A57 /* Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A958F231D397BE900D56699 /* Highlight.swift */; };
 		3AD5EEB91D9433C100E42810 /* FolioReaderWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD5EEB81D9433C100E42810 /* FolioReaderWebView.swift */; };
+		6F144CD52217F3C900A641FB /* OpenDyslexic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CD42217F3C900A641FB /* OpenDyslexic-Bold.ttf */; };
+		6F144CD62217F3C900A641FB /* OpenDyslexic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CD42217F3C900A641FB /* OpenDyslexic-Bold.ttf */; };
+		6F144CD82217F3D900A641FB /* OpenDyslexic-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CD72217F3D900A641FB /* OpenDyslexic-BoldItalic.ttf */; };
+		6F144CD92217F3D900A641FB /* OpenDyslexic-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CD72217F3D900A641FB /* OpenDyslexic-BoldItalic.ttf */; };
+		6F144CE32217F40100A641FB /* OpenDyslexic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CDA2217F40000A641FB /* OpenDyslexic-Regular.ttf */; };
+		6F144CE42217F40100A641FB /* OpenDyslexic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CDA2217F40000A641FB /* OpenDyslexic-Regular.ttf */; };
+		6F144CE52217F40100A641FB /* OpenDyslexicAlta-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CDB2217F40000A641FB /* OpenDyslexicAlta-Italic.ttf */; };
+		6F144CE62217F40100A641FB /* OpenDyslexicAlta-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CDB2217F40000A641FB /* OpenDyslexicAlta-Italic.ttf */; };
+		6F144CE72217F40100A641FB /* OpenDyslexic-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CDC2217F40000A641FB /* OpenDyslexic-Italic.ttf */; };
+		6F144CE82217F40100A641FB /* OpenDyslexic-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CDC2217F40000A641FB /* OpenDyslexic-Italic.ttf */; };
+		6F144CE92217F40100A641FB /* OpenDyslexicAlta-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CDD2217F40000A641FB /* OpenDyslexicAlta-BoldItalic.ttf */; };
+		6F144CEA2217F40100A641FB /* OpenDyslexicAlta-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CDD2217F40000A641FB /* OpenDyslexicAlta-BoldItalic.ttf */; };
+		6F144CEB2217F40100A641FB /* OpenDyslexicAlta-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CDE2217F40000A641FB /* OpenDyslexicAlta-Regular.ttf */; };
+		6F144CEC2217F40100A641FB /* OpenDyslexicAlta-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CDE2217F40000A641FB /* OpenDyslexicAlta-Regular.ttf */; };
+		6F144CED2217F40100A641FB /* OpenDyslexic3-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CDF2217F40000A641FB /* OpenDyslexic3-Bold.ttf */; };
+		6F144CEE2217F40100A641FB /* OpenDyslexic3-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CDF2217F40000A641FB /* OpenDyslexic3-Bold.ttf */; };
+		6F144CEF2217F40100A641FB /* OpenDyslexic3-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CE02217F40000A641FB /* OpenDyslexic3-Regular.ttf */; };
+		6F144CF02217F40100A641FB /* OpenDyslexic3-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CE02217F40000A641FB /* OpenDyslexic3-Regular.ttf */; };
+		6F144CF12217F40100A641FB /* OpenDyslexicAlta-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CE12217F40000A641FB /* OpenDyslexicAlta-Bold.ttf */; };
+		6F144CF22217F40100A641FB /* OpenDyslexicAlta-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CE12217F40000A641FB /* OpenDyslexicAlta-Bold.ttf */; };
+		6F144CF32217F40100A641FB /* OpenDyslexicMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CE22217F40100A641FB /* OpenDyslexicMono-Regular.ttf */; };
+		6F144CF42217F40100A641FB /* OpenDyslexicMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CE22217F40100A641FB /* OpenDyslexicMono-Regular.ttf */; };
 		B0D6990F1D035FA2003B4CCD /* FolioReaderKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B0D6990E1D035FA2003B4CCD /* FolioReaderKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0D699161D035FA2003B4CCD /* FolioReaderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D6990B1D035FA2003B4CCD /* FolioReaderKit.framework */; };
 		B0D6991B1D035FA2003B4CCD /* FolioReaderKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D6991A1D035FA2003B4CCD /* FolioReaderKitTests.swift */; };
@@ -182,6 +204,17 @@
 		3A27F08A1FD9BE5800D84A57 /* FolioReaderUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolioReaderUserDefaults.swift; sourceTree = "<group>"; };
 		3A27F08B1FD9BE5800D84A57 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3AD5EEB81D9433C100E42810 /* FolioReaderWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolioReaderWebView.swift; sourceTree = "<group>"; };
+		6F144CD42217F3C900A641FB /* OpenDyslexic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenDyslexic-Bold.ttf"; sourceTree = "<group>"; };
+		6F144CD72217F3D900A641FB /* OpenDyslexic-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenDyslexic-BoldItalic.ttf"; sourceTree = "<group>"; };
+		6F144CDA2217F40000A641FB /* OpenDyslexic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenDyslexic-Regular.ttf"; sourceTree = "<group>"; };
+		6F144CDB2217F40000A641FB /* OpenDyslexicAlta-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenDyslexicAlta-Italic.ttf"; sourceTree = "<group>"; };
+		6F144CDC2217F40000A641FB /* OpenDyslexic-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenDyslexic-Italic.ttf"; sourceTree = "<group>"; };
+		6F144CDD2217F40000A641FB /* OpenDyslexicAlta-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenDyslexicAlta-BoldItalic.ttf"; sourceTree = "<group>"; };
+		6F144CDE2217F40000A641FB /* OpenDyslexicAlta-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenDyslexicAlta-Regular.ttf"; sourceTree = "<group>"; };
+		6F144CDF2217F40000A641FB /* OpenDyslexic3-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenDyslexic3-Bold.ttf"; sourceTree = "<group>"; };
+		6F144CE02217F40000A641FB /* OpenDyslexic3-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenDyslexic3-Regular.ttf"; sourceTree = "<group>"; };
+		6F144CE12217F40000A641FB /* OpenDyslexicAlta-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenDyslexicAlta-Bold.ttf"; sourceTree = "<group>"; };
+		6F144CE22217F40100A641FB /* OpenDyslexicMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenDyslexicMono-Regular.ttf"; sourceTree = "<group>"; };
 		B0D6990B1D035FA2003B4CCD /* FolioReaderKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FolioReaderKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D6990E1D035FA2003B4CCD /* FolioReaderKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FolioReaderKit.h; sourceTree = "<group>"; };
 		B0D699101D035FA2003B4CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -308,6 +341,7 @@
 		1A958F271D397BE900D56699 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				6F144CD32217F38000A641FB /* Open-Dyslexic */,
 				1A958F281D397BE900D56699 /* Andada */,
 				1A958F2D1D397BE900D56699 /* Lato */,
 				1A958F321D397BE900D56699 /* Lora */,
@@ -358,6 +392,24 @@
 				1A958F3B1D397BE900D56699 /* Raleway-Regular.ttf */,
 			);
 			path = Raleway;
+			sourceTree = "<group>";
+		};
+		6F144CD32217F38000A641FB /* Open-Dyslexic */ = {
+			isa = PBXGroup;
+			children = (
+				6F144CDC2217F40000A641FB /* OpenDyslexic-Italic.ttf */,
+				6F144CDA2217F40000A641FB /* OpenDyslexic-Regular.ttf */,
+				6F144CDF2217F40000A641FB /* OpenDyslexic3-Bold.ttf */,
+				6F144CE02217F40000A641FB /* OpenDyslexic3-Regular.ttf */,
+				6F144CE12217F40000A641FB /* OpenDyslexicAlta-Bold.ttf */,
+				6F144CDD2217F40000A641FB /* OpenDyslexicAlta-BoldItalic.ttf */,
+				6F144CDB2217F40000A641FB /* OpenDyslexicAlta-Italic.ttf */,
+				6F144CDE2217F40000A641FB /* OpenDyslexicAlta-Regular.ttf */,
+				6F144CE22217F40100A641FB /* OpenDyslexicMono-Regular.ttf */,
+				6F144CD72217F3D900A641FB /* OpenDyslexic-BoldItalic.ttf */,
+				6F144CD42217F3C900A641FB /* OpenDyslexic-Bold.ttf */,
+			);
+			path = "Open-Dyslexic";
 			sourceTree = "<group>";
 		};
 		B0D699011D035FA1003B4CCD = {
@@ -535,17 +587,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F144CEF2217F40100A641FB /* OpenDyslexic3-Regular.ttf in Resources */,
 				1A958FBA1D397BE900D56699 /* Lora-Italic.ttf in Resources */,
 				1A958FB21D397BE900D56699 /* Andada-Italic.otf in Resources */,
+				6F144CED2217F40100A641FB /* OpenDyslexic3-Bold.ttf in Resources */,
 				1A958FBF1D397BE900D56699 /* Raleway-Regular.ttf in Resources */,
+				6F144CEB2217F40100A641FB /* OpenDyslexicAlta-Regular.ttf in Resources */,
+				6F144CE52217F40100A641FB /* OpenDyslexicAlta-Italic.ttf in Resources */,
 				1A958FBB1D397BE900D56699 /* Lora-Regular.ttf in Resources */,
+				6F144CE72217F40100A641FB /* OpenDyslexic-Italic.ttf in Resources */,
+				6F144CE92217F40100A641FB /* OpenDyslexicAlta-BoldItalic.ttf in Resources */,
+				6F144CE32217F40100A641FB /* OpenDyslexic-Regular.ttf in Resources */,
 				1A958FB41D397BE900D56699 /* Lato-Bold.ttf in Resources */,
 				1A958FB31D397BE900D56699 /* Andada-Regular.otf in Resources */,
 				1A958FB81D397BE900D56699 /* Lora-Bold.ttf in Resources */,
 				1A958FBE1D397BE900D56699 /* Raleway-Italic.ttf in Resources */,
+				6F144CD52217F3C900A641FB /* OpenDyslexic-Bold.ttf in Resources */,
 				1A9590151D397C1300D56699 /* Images.xcassets in Resources */,
 				1A958FAF1D397BE900D56699 /* Bridge.js in Resources */,
 				1A958FBC1D397BE900D56699 /* Raleway-Bold.ttf in Resources */,
+				6F144CD82217F3D900A641FB /* OpenDyslexic-BoldItalic.ttf in Resources */,
+				6F144CF32217F40100A641FB /* OpenDyslexicMono-Regular.ttf in Resources */,
 				1A958FB71D397BE900D56699 /* Lato-Regular.ttf in Resources */,
 				1A9590121D397BE900D56699 /* Style.css in Resources */,
 				1A958FB01D397BE900D56699 /* Andada-Bold.otf in Resources */,
@@ -554,6 +616,7 @@
 				1A958FB61D397BE900D56699 /* Lato-Italic.ttf in Resources */,
 				1A958FBD1D397BE900D56699 /* Raleway-BoldItalic.ttf in Resources */,
 				1A958FB11D397BE900D56699 /* Andada-BoldItalic.otf in Resources */,
+				6F144CF12217F40100A641FB /* OpenDyslexicAlta-Bold.ttf in Resources */,
 				1A958FB91D397BE900D56699 /* Lora-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +625,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F144CE82217F40100A641FB /* OpenDyslexic-Italic.ttf in Resources */,
+				6F144CD92217F3D900A641FB /* OpenDyslexic-BoldItalic.ttf in Resources */,
+				6F144CEE2217F40100A641FB /* OpenDyslexic3-Bold.ttf in Resources */,
+				6F144CEA2217F40100A641FB /* OpenDyslexicAlta-BoldItalic.ttf in Resources */,
+				6F144CE42217F40100A641FB /* OpenDyslexic-Regular.ttf in Resources */,
+				6F144CF42217F40100A641FB /* OpenDyslexicMono-Regular.ttf in Resources */,
+				6F144CEC2217F40100A641FB /* OpenDyslexicAlta-Regular.ttf in Resources */,
+				6F144CF02217F40100A641FB /* OpenDyslexic3-Regular.ttf in Resources */,
+				6F144CD62217F3C900A641FB /* OpenDyslexic-Bold.ttf in Resources */,
+				6F144CF22217F40100A641FB /* OpenDyslexicAlta-Bold.ttf in Resources */,
+				6F144CE62217F40100A641FB /* OpenDyslexicAlta-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
