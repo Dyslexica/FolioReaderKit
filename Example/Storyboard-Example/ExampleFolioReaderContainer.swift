@@ -17,6 +17,13 @@ class ExampleFolioReaderContainer: FolioReaderContainer {
         let config = FolioReaderConfig()
         config.scrollDirection = .horizontalWithVerticalContent
         config.shouldHideNavigationOnTap = false
+        
+        for familyName:String in UIFont.familyNames {
+            print("Family Name: \(familyName)")
+            for fontName:String in UIFont.fontNames(forFamilyName: familyName) {
+                print("--Font Name: \(fontName)")
+            }
+        }
 
         // Print the chapter ID if one was clicked
         // A chapter in "The Silver Chair" looks like this "<section class="chapter" title="Chapter I" epub:type="chapter" id="id70364673704880">"
