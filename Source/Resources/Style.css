@@ -237,8 +237,10 @@ html.nightMode .highlight-underline {border-bottom: 2px solid rgba(240, 40, 20, 
  */
 
 .andada, .andada p, .andada span, .andada div { font-family: "Andada", sans-serif !important; }
-.lato, .lato p, .lato span, .lato div { font-family: "Lato", serif !important; }
-.lora, .lora p, .lora span, .lora div { font-family: "Lora", serif !important; }
+.lato, .lato p, .lato span, .lato div { font-family: "Lato", sans-serif !important; }
+.arial, .arial p, .arial span, .arial div { font-family: "Arial", sans-serif !important; }
+.helvetica, .helvetica p, .helvetica span, .helvetica div { font-family: "Helvetica", serif !important; }
+.lora, .lora p, .lora span, .lora div { font-family: "Lora", sans-serif !important; }
 .opendyslexic, .opendyslexic p, .opendyslexic span, .opendyslexic div { font-family: "OpenDyslexic", sans-serif !important; color: #004f9e}
 
 html.textSizeOne, .textSizeOne body { font-size: 13px !important; }

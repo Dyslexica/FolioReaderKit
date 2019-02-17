@@ -51,8 +51,10 @@ function removeClass(ele,cls) {
 function setFontName(cls) {
     var elm = document.documentElement;
     removeClass(elm, "andada");
-    removeClass(elm, "lato");
-    removeClass(elm, "lora");
+//    removeClass(elm, "lato");
+//    removeClass(elm, "lora");
+    removeClass(elm, "arial");
+    removeClass(elm, "helvetica");
     removeClass(elm, "opendyslexic");
     addClass(elm, cls);
 }
