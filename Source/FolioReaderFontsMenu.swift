@@ -169,10 +169,10 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
         fontName.addSegmentWithTitle("Lora", onSelectionImage: nil, offSelectionImage: nil)
         fontName.addSegmentWithTitle("OpenDyslexic", onSelectionImage: nil, offSelectionImage: nil)
         
-        fontName.segments[0].titleFont = UIFont(name: "Andada Regular", size: 18)!
-        fontName.segments[1].titleFont = UIFont(name: "Lato Regular", size: 18)!
-        fontName.segments[2].titleFont = UIFont(name: "Lora Regular", size: 18)!
-        fontName.segments[3].titleFont = UIFont(name: "OpenDyslexic Regular", size: 18)!
+//        fontName.segments[0].titleFont = UIFont(name: "Andada", size: 18)!
+//        fontName.segments[1].titleFont = UIFont(name: "Lato", size: 18)!
+//        fontName.segments[2].titleFont = UIFont(name: "Lora", size: 18)!
+        fontName.segments[3].titleFont = UIFont(name: "OpenDyslexic", size: 18)!
 
         fontName.selectSegmentAtIndex(self.folioReader.currentFont.rawValue)
         menuView.addSubview(fontName)
