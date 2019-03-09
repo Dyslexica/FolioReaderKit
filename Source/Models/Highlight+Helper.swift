@@ -169,7 +169,7 @@ extension Highlight {
             let realm = try Realm(configuration: readerConfig.realmConfiguration)
             highlight = realm.objects(Highlight.self).filter(predicate).toArray(Highlight.self).first
             realm.beginWrite()
-
+            
             highlight?.type = type.hashValue
 
             try realm.commitWrite()
