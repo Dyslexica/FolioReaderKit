@@ -14,6 +14,8 @@ import UIKit
 internal let kApplicationDocumentsDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
 internal let kCurrentFontFamily = "com.folioreader.kCurrentFontFamily"
 internal let kCurrentFontSize = "com.folioreader.kCurrentFontSize"
+internal let kCurrentFontColor = "com.folioreader.kCurrentFontColor"
+internal let kCurrentLineHeight = "com.folioreader.kCurrentLineHeight"
 internal let kCurrentAudioRate = "com.folioreader.kCurrentAudioRate"
 internal let kCurrentHighlightStyle = "com.folioreader.kCurrentHighlightStyle"
 internal let kCurrentMediaOverlayStyle = "com.folioreader.kMediaOverlayStyle"
@@ -196,7 +198,41 @@ extension FolioReader {
             }
         }
     }
-
+    
+    /// Check current font color. Default black
+    open var currentFontColor: UIColor {
+        get {
+            guard
+                let rawValue = self.defaults.value(forKey: kCurrentFontColor) as? String
+                else {
+                    return UIColor.black
+            }
+            return UIColor(rgba: rawValue)
+        }
+        set (color) {
+            let c = color.hexString(false)
+            self.defaults.set(c, forKey: kCurrentFontColor)
+            _ = self.readerCenter?.currentPage?.webView?.js("setFontColor('\(c)')")
+        }
+        
+    }
+    
+    open var currentLineHeight: Float {
+        get {
+            guard
+                let rawValue = self.defaults.value(forKey: kCurrentLineHeight) as? NSString
+            else {
+                return 3.0
+            }
+            return rawValue.floatValue
+        }
+        set (height) {
+            self.defaults.set(String(height), forKey: kCurrentLineHeight)
+            _ = self.readerCenter?.currentPage?.webView?.js("setLineHeight('\(height / 2.0 + 1.0)')")
+        }
+    }
+    
+    
     /// Check current font name. Default .andada
     open var currentFont: FolioReaderFont {
         get {

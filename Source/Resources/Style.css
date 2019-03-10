@@ -31,6 +31,12 @@ footer, header, hgroup, menu, nav, section {
 }
 
 /* ePUB */
+
+:root {
+    --chosen-color: #000000;
+    --line-spacing: 2.0;
+}
+
 html {
     -webkit-text-size-adjust: none; /* Never autoresize text */
     padding: 0 0 !important;
@@ -200,7 +206,6 @@ html .highlight-yellow, html .highlight-green, html .highlight-blue, html .highl
 
 html, body {
     -webkit-transition: all 0.6s ease;
-    --chosen-color: #000000;
 }
 
 html {
@@ -244,44 +249,45 @@ html.nightMode .highlight-underline {border-bottom: 2px solid rgba(240, 40, 20, 
 .lora, .lora p, .lora span, .lora div { font-family: "Lora", sans-serif !important; color: var(--chosen-color)}
 .opendyslexic, .opendyslexic p, .opendyslexic span, .opendyslexic div { font-family: "OpenDyslexic", sans-serif !important; color: var(--chosen-color)}
 
-html.textSizeOne, .textSizeOne body { font-size: 15px !important; }
-html.textSizeTwo, .textSizeTwo body { font-size: 21px !important; }
-html.textSizeThree, .textSizeThree body { font-size: 25px !important; }
-html.textSizeFour, .textSizeFour body { font-size: 31px !important; }
-html.textSizeFive, .textSizeFive body { font-size: 37px !important; }
+html.textSizeOne, .textSizeOne body { font-size: 21px !important; }
+html.textSizeTwo, .textSizeTwo body { font-size: 27px !important; }
+html.textSizeThree, .textSizeThree body { font-size: 31px !important; }
+html.textSizeFour, .textSizeFour body { font-size: 37px !important; }
+html.textSizeFive, .textSizeFive body { font-size: 43px !important; }
 
 h1 {
     font-size: 2em;
-    line-height: 1.2;
+    line-height: var(--line-spacing);
 }
 h2 {
     font-size: 1.5em;
-    line-height: 1.2;
+    line-height: var(--line-spacing);
 }
 h3 {
     font-size: 1.17em;
-    line-height: 1.2;
+    line-height: var(--line-spacing);
 }
 h4 {
     font-size: 1em;
-    line-height: 1.2;
+    line-height: var(--line-spacing);
 }
 h5 {
     font-size: 0.83em;
-    line-height: 1.2;
+    line-height: var(--line-spacing);
 }
 h6 {
     font-size: 0.67em;
-    line-height: 1.2;
+    line-height: var(--line-spacing);
 }
 body {
     word-break: break-word !important;
     -webkit-hyphens: auto !important;
     hyphens: auto !important;
+    line-height: var(--line-spacing);
 }
 p, span, div {
     font-size: 1em;
-    line-height: 1.5 !important;
+    line-height: var(--line-spacing) !important;
 }
 @media only screen and (min-device-width: 600px) {
     div {

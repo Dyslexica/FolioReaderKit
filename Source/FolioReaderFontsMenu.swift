@@ -103,7 +103,7 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
         view.addGestureRecognizer(tapGesture)
 
         // Menu view
-        let visibleHeight: CGFloat = self.readerConfig.canChangeScrollDirection ? 222 : 170
+        let visibleHeight: CGFloat = self.readerConfig.canChangeScrollDirection ? 277 : 225
         menuView = UIView(frame: CGRect(x: 0, y: view.frame.height-visibleHeight, width: view.frame.width, height: view.frame.height))
         menuView.backgroundColor = self.folioReader.isNight(self.readerConfig.nightModeMenuBackground, UIColor.white)
         menuView.autoresizingMask = .flexibleWidth
@@ -122,11 +122,16 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
         let moon = UIImage(readerImageNamed: "icon-moon")
         let fontSmall = UIImage(readerImageNamed: "icon-font-small")
         let fontBig = UIImage(readerImageNamed: "icon-font-big")
+        let lhSmall = UIImage(readerImageNamed: "icon-font-small")
+        let lhBig = UIImage(readerImageNamed: "icon-font-big")
 
         let sunNormal = sun?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
         let moonNormal = moon?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
         let fontSmallNormal = fontSmall?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
         let fontBigNormal = fontBig?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
+        let lhSmallNormal = lhSmall?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
+        let lhBigNormal = lhBig?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
+        
 
         let sunSelected = sun?.imageTintColor(selectedColor)?.withRenderingMode(.alwaysOriginal)
         let moonSelected = moon?.imageTintColor(selectedColor)?.withRenderingMode(.alwaysOriginal)
@@ -224,6 +229,47 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
         fontBigView.image = fontBigNormal
         fontBigView.contentMode = UIView.ContentMode.center
         menuView.addSubview(fontBigView)
+        
+        // Separator 4
+        let line4 = UIView(frame: CGRect(x: 0, y: line2.frame.origin.y+slider.frame.height, width: view.frame.width, height: 1))
+        line4.backgroundColor = self.readerConfig.nightModeSeparatorColor
+        menuView.addSubview(line4)
+        
+        // Font lh size
+        let lh = HADiscreteSlider(frame: CGRect(x: 60, y: line4.frame.origin.y+2, width: view.frame.width-120, height: 55))
+        lh.tickStyle = ComponentStyle.rounded
+        lh.tickCount = 8
+        lh.tickSize = CGSize(width: 5, height: 5)
+        
+        lh.thumbStyle = ComponentStyle.rounded
+        lh.thumbSize = CGSize(width: 28, height: 28)
+        lh.thumbShadowOffset = CGSize(width: 0, height: 2)
+        lh.thumbShadowRadius = 3
+        lh.thumbColor = selectedColor
+        
+        lh.backgroundColor = UIColor.clear
+        lh.tintColor = self.readerConfig.nightModeSeparatorColor
+        lh.minimumValue = 0
+        lh.value = CGFloat(self.folioReader.currentLineHeight)
+        lh.addTarget(self, action: #selector(FolioReaderFontsMenu.lhValueChanged(_:)), for: UIControl.Event.valueChanged)
+        
+        // Force remove fill color
+        lh.layer.sublayers?.forEach({ layer in
+            layer.backgroundColor = UIColor.clear.cgColor
+        })
+        
+        menuView.addSubview(lh)
+        
+        // Font icons
+        let lhSmallView = UIImageView(frame: CGRect(x: 20, y: line4.frame.origin.y+14, width: 30, height: 30))
+        lhSmallView.image = lhSmallNormal
+        lhSmallView.contentMode = UIView.ContentMode.center
+        menuView.addSubview(lhSmallView)
+        
+        let lhBigView = UIImageView(frame: CGRect(x: view.frame.width-50, y: line4.frame.origin.y+14, width: 30, height: 30))
+        lhBigView.image = lhBigNormal
+        lhBigView.contentMode = UIView.ContentMode.center
+        menuView.addSubview(lhBigView)
 
         // Only continues if user can change scroll direction
         guard (self.readerConfig.canChangeScrollDirection == true) else {
@@ -231,7 +277,7 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
         }
 
         // Separator 3
-        let line3 = UIView(frame: CGRect(x: 0, y: line2.frame.origin.y+56, width: view.frame.width, height: 1))
+        let line3 = UIView(frame: CGRect(x: 0, y: line4.frame.origin.y+lh.frame.height, width: view.frame.width, height: 1))
         line3.backgroundColor = self.readerConfig.nightModeSeparatorColor
         menuView.addSubview(line3)
 
@@ -272,6 +318,9 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
             layoutDirection.selectSegmentAtIndex(FolioReaderScrollDirection.horizontal.rawValue)
         }
         menuView.addSubview(layoutDirection)
+        
+        
+        
     }
 
     // MARK: - SMSegmentView delegate
@@ -299,6 +348,18 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
 
             self.folioReader.currentScrollDirection = index
         }
+    }
+    
+    // MARK: - Line Height changed
+    
+    @objc func lhValueChanged(_ sender: HADiscreteSlider) {
+        guard
+            (self.folioReader.readerCenter?.currentPage != nil)
+             else {
+                return
+        }
+        let lh: Float = Float(sender.value)
+        self.folioReader.currentLineHeight = lh
     }
     
     // MARK: - Font slider changed

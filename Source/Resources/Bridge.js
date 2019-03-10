@@ -80,6 +80,18 @@ function setFontSize(cls) {
     addClass(elm, cls);
 }
 
+// Set text color
+function setFontColor(color) {
+    var elm = document.documentElement;
+    elm.style.setProperty("--chosen-color", color);
+}
+
+// Set line height between lines of text
+function setLineHeight(lh) {
+    var elm = document.documentElement;
+    elm.style.setProperty("--line-spacing", lh);
+}
+
 /*
  *	Native bridge Highlight text
  */
