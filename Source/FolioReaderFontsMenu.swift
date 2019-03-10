@@ -309,7 +309,7 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
             let fontSize = FolioReaderFontSize(rawValue: Int(sender.value)) else {
                 return
         }
-        
+
         self.folioReader.currentFontSize = fontSize
     }
     

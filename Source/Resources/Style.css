@@ -243,11 +243,11 @@ html.nightMode .highlight-underline {border-bottom: 2px solid rgba(240, 40, 20, 
 .lora, .lora p, .lora span, .lora div { font-family: "Lora", sans-serif !important; }
 .opendyslexic, .opendyslexic p, .opendyslexic span, .opendyslexic div { font-family: "OpenDyslexic", sans-serif !important; color: #004f9e}
 
-html.textSizeOne, .textSizeOne body { font-size: 13px !important; }
-html.textSizeTwo, .textSizeTwo body { font-size: 15px !important; }
-html.textSizeThree, .textSizeThree body { font-size: 17px !important; }
-html.textSizeFour, .textSizeFour body { font-size: 19px !important; }
-html.textSizeFive, .textSizeFive body { font-size: 21px !important; }
+html.textSizeOne, .textSizeOne body { font-size: 15px !important; }
+html.textSizeTwo, .textSizeTwo body { font-size: 19px !important; }
+html.textSizeThree, .textSizeThree body { font-size: 21px !important; }
+html.textSizeFour, .textSizeFour body { font-size: 23px !important; }
+html.textSizeFive, .textSizeFive body { font-size: 25px !important; }
 
 h1 {
     font-size: 2em;
