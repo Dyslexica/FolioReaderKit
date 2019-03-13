@@ -224,12 +224,11 @@ extension FolioReader {
             else {
                 return 3.0
             }
-            print(rawValue)
             return rawValue.floatValue
         }
         set (height) {
             self.defaults.set(String(height), forKey: kCurrentLineHeight)
-            _ = self.readerCenter?.currentPage?.webView?.js("setLineHeight('\(height / 2.0 + 1.0)')")
+            _ = self.readerCenter?.currentPage?.webView?.js("setLineHeight('\(height / 1.5 + 1.0)')")
         }
     }
     

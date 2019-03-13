@@ -490,7 +490,6 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         classes += " \(folioReader.currentFontSize.cssIdentifier)"
 
         html = html.replacingOccurrences(of: "<html ", with: "<html class=\"\(classes)\"")
-        html = html.replacingOccurrences(of: "--chosen-color: #000000", with: "--chosen-color: \(readerConfig.fontTextColor.hexString(false))")
 
         // Let the delegate adjust the html string
         if let modifiedHtmlContent = self.delegate?.htmlContentForPage?(cell, htmlContent: html) {
