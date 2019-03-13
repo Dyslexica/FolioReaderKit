@@ -110,7 +110,7 @@ open class FolioReaderConfig: NSObject {
     open var menuTextColor = UIColor(rgba: "#767676")
     
     /// Font text color
-    open var fontTextColor = UIColor(rgba: "#00FF00")
+    open var fontTextColor = UIColor(rgba: "#000000")
 
     /// Night mode background color
     open var nightModeBackground = UIColor(rgba: "#131313")
