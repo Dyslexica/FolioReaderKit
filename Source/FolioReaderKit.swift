@@ -224,6 +224,7 @@ extension FolioReader {
             else {
                 return 3.0
             }
+            print(rawValue)
             return rawValue.floatValue
         }
         set (height) {

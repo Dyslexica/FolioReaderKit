@@ -64,7 +64,6 @@ open class FolioReaderContainer: UIViewController {
         // See the ExampleFolioReaderContainer.swift for more information?
         self.readerConfig = FolioReaderConfig()
         self.folioReader = FolioReader()
-        self.folioReader.currentFontColor = UIColor.green
         self.epubPath = ""
         self.shouldRemoveEpub = false
         self.book = FRBook()
