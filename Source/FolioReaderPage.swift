@@ -218,7 +218,7 @@ open class FolioReaderPage: UICollectionViewCell, UIWebViewDelegate, UIGestureRe
             scrollPageToBottom()
         }
         
-        webView.js("setLineHeight('\(self.folioReader.currentLineHeight / 1.5 + 1.0)')")
+        webView.js("setLineHeight('\(self.folioReader.currentLineHeight + 1.0)')")
         webView.js("setFontColor('\(self.readerConfig.fontTextColor.hexString(false))')")
 
         UIView.animate(withDuration: 0.2, animations: {webView.alpha = 1}, completion: { finished in
