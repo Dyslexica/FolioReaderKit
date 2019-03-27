@@ -122,8 +122,8 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
         let moon = UIImage(readerImageNamed: "icon-moon")
         let fontSmall = UIImage(readerImageNamed: "icon-font-small")
         let fontBig = UIImage(readerImageNamed: "icon-font-big")
-        let lhSmall = UIImage(readerImageNamed: "icon-font-small")
-        let lhBig = UIImage(readerImageNamed: "icon-font-big")
+        let lhSmall = UIImage(readerImageNamed: "line-spacing-icon-small")
+        let lhBig = UIImage(readerImageNamed: "line-spacing-icon-large")
 
         let sunNormal = sun?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
         let moonNormal = moon?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
