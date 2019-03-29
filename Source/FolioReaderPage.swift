@@ -220,6 +220,8 @@ open class FolioReaderPage: UICollectionViewCell, UIWebViewDelegate, UIGestureRe
         
         webView.js("setLineHeight('\(self.folioReader.currentLineHeight + 1.0)')")
         webView.js("setFontColor('\(self.readerConfig.fontTextColor.hexString(false))')")
+        webView.js("setLetterSpacing('\(self.folioReader.currentLetterSpacing)')")
+        webView.js("setWordSpacing('\(self.folioReader.currentWordSpacing)')")
 
         UIView.animate(withDuration: 0.2, animations: {webView.alpha = 1}, completion: { finished in
             webView.isColors = false

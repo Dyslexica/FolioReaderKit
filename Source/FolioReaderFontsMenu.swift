@@ -103,7 +103,8 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
         view.addGestureRecognizer(tapGesture)
 
         // Menu view
-        let visibleHeight: CGFloat = self.readerConfig.canChangeScrollDirection ? 277 : 225
+        let heightCalc: CGFloat = 225 + (56 * 2)
+        let visibleHeight: CGFloat = self.readerConfig.canChangeScrollDirection ? heightCalc + 52 : hieghtCalc
         menuView = UIView(frame: CGRect(x: 0, y: view.frame.height-visibleHeight, width: view.frame.width, height: view.frame.height))
         menuView.backgroundColor = self.folioReader.isNight(self.readerConfig.nightModeMenuBackground, UIColor.white)
         menuView.autoresizingMask = .flexibleWidth
@@ -124,6 +125,10 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
         let fontBig = UIImage(readerImageNamed: "icon-font-big")
         let lhSmall = UIImage(readerImageNamed: "line-spacing-icon-small")
         let lhBig = UIImage(readerImageNamed: "line-spacing-icon-large")
+        let lsSmall = UIImage(readerImageNamed: "icon-font-small")//"icon-ls-small")
+        let lsBig = UIImage(readerImageNamed: "icon-font-small")//"icon-ls-big")
+        let wsSmall = UIImage(readerImageNamed: "icon-font-small")//"icon-ws-small")
+        let wsBig = UIImage(readerImageNamed: "icon-font-small")//"icon-ws-big")
 
         let sunNormal = sun?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
         let moonNormal = moon?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
@@ -131,8 +136,9 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
         let fontBigNormal = fontBig?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
         let lhSmallNormal = lhSmall?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
         let lhBigNormal = lhBig?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
+        let lsSmallNormal = lsSmall?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
+        let lsBigNormal = lsBig?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
         
-
         let sunSelected = sun?.imageTintColor(selectedColor)?.withRenderingMode(.alwaysOriginal)
         let moonSelected = moon?.imageTintColor(selectedColor)?.withRenderingMode(.alwaysOriginal)
 
@@ -270,14 +276,96 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
         lhBigView.image = lhBigNormal
         lhBigView.contentMode = UIView.ContentMode.center
         menuView.addSubview(lhBigView)
+        
+        // Separator 5
+        let line5 = UIView(frame: CGRect(x: 0, y: line4.frame.origin.y+slider.frame.height, width: view.frame.width, height: 1))
+        line5.backgroundColor = self.readerConfig.nightModeSeparatorColor
+        menuView.addSubview(line5)
 
+        // Letter spacing control
+        let ls = HADiscreteSlider(frame: CGRect(x: 60, y: line5.frame.origin.y+2, width: view.frame.width-120, height: 55))
+        ls.tickStyle = ComponentStyle.rounded
+        ls.tickCount = 8
+        ls.tickSize = CGSize(width: 5, height: 5)
+        
+        ls.thumbStyle = ComponentStyle.rounded
+        ls.thumbSize = CGSize(width: 28, height: 28)
+        ls.thumbShadowOffset = CGSize(width: 0, height: 2)
+        ls.thumbShadowRadius = 3
+        ls.thumbColor = selectedColor
+        
+        ls.backgroundColor = UIColor.clear
+        ls.tintColor = self.readerConfig.nightModeSeparatorColor
+        ls.minimumValue = 0
+        ls.value = CGFloat(self.folioReader.currentLetterSpacing)
+        ls.addTarget(self, action: #selector(FolioReaderFontsMenu.lsValueChanged(_:)), for: UIControl.Event.valueChanged)
+        
+        // Force remove fill color
+        ls.layer.sublayers?.forEach({ layer in
+            layer.backgroundColor = UIColor.clear.cgColor
+        })
+        
+        menuView.addSubview(ls)
+        
+        // Letter Spacing Icons
+        let lsSmallView = UIImageView(frame: CGRect(x: 20, y: line5.frame.origin.y+14, width: 30, height: 30))
+        lsSmallView.image = lsSmallNormal
+        lsSmallView.contentMode = UIView.ContentMode.center
+        menuView.addSubview(lsSmallView)
+        
+        let lsBigView = UIImageView(frame: CGRect(x: view.frame.width-50, y: line5.frame.origin.y+14, width: 30, height: 30))
+        lsBigView.image = lsBigNormal
+        lsBigView.contentMode = UIView.ContentMode.center
+        menuView.addSubview(lsBigView)
+        
+        // Separator 6
+        let line6 = UIView(frame: CGRect(x: 0, y: line5.frame.origin.y+slider.frame.height, width: view.frame.width, height: 1))
+        line6.backgroundColor = self.readerConfig.nightModeSeparatorColor
+        menuView.addSubview(line6)
+        
+        // word spacing control
+        let ws = HADiscreteSlider(frame: CGRect(x: 60, y: line6.frame.origin.y+2, width: view.frame.width-120, height: 55))
+        ws.tickStyle = ComponentStyle.rounded
+        ws.tickCount = 8
+        ws.tickSize = CGSize(width: 5, height: 5)
+        
+        ws.thumbStyle = ComponentStyle.rounded
+        ws.thumbSize = CGSize(width: 28, height: 28)
+        ws.thumbShadowOffset = CGSize(width: 0, height: 2)
+        ws.thumbShadowRadius = 3
+        ws.thumbColor = selectedColor
+        
+        ws.backgroundColor = UIColor.clear
+        ws.tintColor = self.readerConfig.nightModeSeparatorColor
+        ws.minimumValue = 0
+        ws.value = CGFloat(self.folioReader.currentWordSpacing)
+        ws.addTarget(self, action: #selector(FolioReaderFontsMenu.wsValueChanged(_:)), for: UIControl.Event.valueChanged)
+        
+        // Force remove fill color
+        ws.layer.sublayers?.forEach({ layer in
+            layer.backgroundColor = UIColor.clear.cgColor
+        })
+        
+        menuView.addSubview(ws)
+        
+        // Letter Spacing Icons
+        let wsSmallView = UIImageView(frame: CGRect(x: 20, y: line6.frame.origin.y+14, width: 30, height: 30))
+        wsSmallView.image = wsSmallNormal
+        wsSmallView.contentMode = UIView.ContentMode.center
+        menuView.addSubview(wsSmallView)
+        
+        let wsBigView = UIImageView(frame: CGRect(x: view.frame.width-50, y: line6.frame.origin.y+14, width: 30, height: 30))
+        wsBigView.image = wsBigNormal
+        wsBigView.contentMode = UIView.ContentMode.center
+        menuView.addSubview(wsBigView)
+        
         // Only continues if user can change scroll direction
         guard (self.readerConfig.canChangeScrollDirection == true) else {
             return
         }
 
         // Separator 3
-        let line3 = UIView(frame: CGRect(x: 0, y: line4.frame.origin.y+lh.frame.height, width: view.frame.width, height: 1))
+        let line3 = UIView(frame: CGRect(x: 0, y: line4.frame.origin.y+ls.frame.height, width: view.frame.width, height: 1))
         line3.backgroundColor = self.readerConfig.nightModeSeparatorColor
         menuView.addSubview(line3)
 
@@ -349,6 +437,29 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
             self.folioReader.currentScrollDirection = index
         }
     }
+    
+    // MARK: - Letter spacing
+    @objc func lsValueChanged(_ sender: HADiscreteSlider) {
+        guard
+            (self.folioReader.readerCenter?.currentPage != nil)
+            else {
+                return
+        }
+        let ls: Float = Float(sender.value)
+        self.folioReader.currentLineSpacing = ls
+    }
+    
+    // MARK: - Word spacing
+    @objc func wsValueChanged(_ sender: HADiscreteSlider) {
+        guard
+            (self.folioReader.readerCenter?.currentPage != nil)
+            else {
+                return
+        }
+        let ws: Float = Float(sender.value)
+        self.folioReader.currentWordSpacing = ws
+    }
+    
     
     // MARK: - Line Height changed
     

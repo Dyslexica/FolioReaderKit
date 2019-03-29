@@ -111,6 +111,15 @@ open class FolioReaderConfig: NSObject {
     
     /// Font text color
     open var fontTextColor = UIColor(rgba: "#000000")
+    
+    /// Line Spacing
+    open var lineHeight = 1.5
+    
+    /// Letter Spacing
+    open var letterSpacing = 1.5
+    
+    /// Word Spacing
+    open var wordSpacing = 1.5
 
     /// Night mode background color
     open var nightModeBackground = UIColor(rgba: "#131313")

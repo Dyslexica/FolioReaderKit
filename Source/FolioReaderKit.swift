@@ -16,6 +16,8 @@ internal let kCurrentFontFamily = "com.folioreader.kCurrentFontFamily"
 internal let kCurrentFontSize = "com.folioreader.kCurrentFontSize"
 internal let kCurrentFontColor = "com.folioreader.kCurrentFontColor"
 internal let kCurrentLineHeight = "com.folioreader.kCurrentLineHeight"
+internal let kCurrentLetterSpacing = "com.folioreader.kCurrentLetterSpacing"
+internal let kCurrentWordSpacing = "com.folioreader.kCurrentWordSpacing"
 internal let kCurrentAudioRate = "com.folioreader.kCurrentAudioRate"
 internal let kCurrentHighlightStyle = "com.folioreader.kCurrentHighlightStyle"
 internal let kCurrentMediaOverlayStyle = "com.folioreader.kMediaOverlayStyle"
@@ -229,6 +231,36 @@ extension FolioReader {
         set (height) {
             self.defaults.set(String(height), forKey: kCurrentLineHeight)
             _ = self.readerCenter?.currentPage?.webView?.js("setLineHeight('\(height / 1.5 + 1.0)')")
+        }
+    }
+    
+    open var currentLetterSpacing: Float {
+        get {
+            guard
+                let rawValue = self.defaults.value(forKey: kCurrentLetterSpacing) as? NSString
+                else {
+                    return 1.5
+                }
+            return rawValue.floatValue
+        }
+        set (letterSpacing) {
+            self.defaults.set(String(letterSpacing), forKey: kCurrentLetterSpacing)
+            _ = self.readerCenter?.currentPage?.webView?.js("setLetterSpacing('\(letterSpacing)')")
+        }
+    }
+    
+    open var currentWordSpacing: Float {
+        get {
+            guard
+                let rawValue = self.defaults.value(forKey: kCurrentWordSpacing) as? NSString
+                else {
+                    return 1.5
+                }
+            return rawValue.floatValue
+        }
+        set (wordSpacing) {
+            self.defaults.set(String(wordSpacing), forKey: kCurrentLetterSpacing)
+            _ = self.readerCenter?.currentPage?.webView?.js("setWordSpacing('\(wordSpacing)')")
         }
     }
     

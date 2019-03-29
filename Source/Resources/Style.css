@@ -35,6 +35,8 @@ footer, header, hgroup, menu, nav, section {
 :root {
     --chosen-color: #000000;
     --line-spacing: 2.0;
+    --letter-spacing: 1.5;
+    --word-spacing: 1.5;
 }
 
 html {
@@ -258,26 +260,38 @@ html.textSizeFive, .textSizeFive body { font-size: 43px !important; }
 h1 {
     font-size: 2em;
     line-height: var(--line-spacing);
+    letter-spacing: var(--letter-spacing);
+    word-spacing: var(--word-spacing);
 }
 h2 {
     font-size: 1.5em;
     line-height: var(--line-spacing);
+    letter-spacing: var(--letter-spacing);
+    word-spacing: var(--word-spacing);
 }
 h3 {
     font-size: 1.17em;
     line-height: var(--line-spacing);
+    letter-spacing: var(--letter-spacing);
+    word-spacing: var(--word-spacing);
 }
 h4 {
     font-size: 1em;
     line-height: var(--line-spacing);
+    letter-spacing: var(--letter-spacing);
+    word-spacing: var(--word-spacing);
 }
 h5 {
     font-size: 0.83em;
     line-height: var(--line-spacing);
+    letter-spacing: var(--letter-spacing);
+    word-spacing: var(--word-spacing);
 }
 h6 {
     font-size: 0.67em;
     line-height: var(--line-spacing);
+    letter-spacing: var(--letter-spacing);
+    word-spacing: var(--word-spacing);
 }
 body {
     word-break: break-word !important;
@@ -288,6 +302,8 @@ body {
 p, span, div {
     font-size: 1em;
     line-height: var(--line-spacing) !important;
+    letter-spacing: var(--letter-spacing) !important;
+    word-spacing: var(--word-spacing) !important;
 }
 @media only screen and (min-device-width: 600px) {
     div {

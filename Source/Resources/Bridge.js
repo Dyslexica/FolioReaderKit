@@ -92,6 +92,19 @@ function setLineHeight(lh) {
     elm.style.setProperty("--line-spacing", lh);
 }
 
+// Set letter spacing
+function setLetterSpacing(ls) {
+    var elm = document.documentElement;
+    elm.style.setProperty("--letter-spacing", ls);
+}
+
+// Set word spacing
+function setWordSpacing(ws) {
+    var elm = document.documentElement;
+    elm.style.setProperty("--word-spacing", ws);
+}
+
+
 /*
  *	Native bridge Highlight text
  */
