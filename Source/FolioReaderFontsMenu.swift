@@ -104,7 +104,7 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
 
         // Menu view
         let heightCalc: CGFloat = 225 + (56 * 2)
-        let visibleHeight: CGFloat = self.readerConfig.canChangeScrollDirection ? heightCalc + 52 : hieghtCalc
+        let visibleHeight: CGFloat = self.readerConfig.canChangeScrollDirection ? heightCalc + 52 : heightCalc
         menuView = UIView(frame: CGRect(x: 0, y: view.frame.height-visibleHeight, width: view.frame.width, height: view.frame.height))
         menuView.backgroundColor = self.folioReader.isNight(self.readerConfig.nightModeMenuBackground, UIColor.white)
         menuView.autoresizingMask = .flexibleWidth
@@ -138,6 +138,8 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
         let lhBigNormal = lhBig?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
         let lsSmallNormal = lsSmall?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
         let lsBigNormal = lsBig?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
+        let wsSmallNormal = wsSmall?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
+        let wsBigNormal = wsBig?.imageTintColor(normalColor)?.withRenderingMode(.alwaysOriginal)
         
         let sunSelected = sun?.imageTintColor(selectedColor)?.withRenderingMode(.alwaysOriginal)
         let moonSelected = moon?.imageTintColor(selectedColor)?.withRenderingMode(.alwaysOriginal)
@@ -446,7 +448,7 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
                 return
         }
         let ls: Float = Float(sender.value)
-        self.folioReader.currentLineSpacing = ls
+        self.folioReader.currentLetterSpacing = ls
     }
     
     // MARK: - Word spacing
