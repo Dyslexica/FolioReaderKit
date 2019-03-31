@@ -1348,7 +1348,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         animator = ZFModalTransitionAnimator(modalViewController: menu)
         animator.isDragable = false
         animator.bounces = false
-        animator.behindViewAlpha = 0.75
+        animator.behindViewAlpha = 0.9
         animator.behindViewScale = 1
         animator.transitionDuration = 0.6
         animator.direction = ZFModalTransitonDirection.bottom
