@@ -35,7 +35,7 @@ footer, header, hgroup, menu, nav, section {
 :root {
     --chosen-color: #000000;
     --line-spacing: 2.0;
-    --letter-spacing: 1.5;
+    --letter-spacing: 3.0;
     --word-spacing: 1.5;
 }
 
