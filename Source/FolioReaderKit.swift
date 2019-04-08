@@ -259,7 +259,7 @@ extension FolioReader {
             return rawValue.floatValue
         }
         set (wordSpacing) {
-            self.defaults.set(String(wordSpacing), forKey: kCurrentLetterSpacing)
+            self.defaults.set(String(wordSpacing), forKey: kCurrentWordSpacing)
             _ = self.readerCenter?.currentPage?.webView?.js("setWordSpacing('\(wordSpacing)')")
         }
     }
