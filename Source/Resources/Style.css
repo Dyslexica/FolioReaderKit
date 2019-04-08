@@ -48,6 +48,8 @@ html {
 body {
     padding: 40px 20px !important;
     overflow: hidden !important;
+    letter-spacing: var(--letter-spacing) !important;
+    word-spacing: var(--word-spacing) !important;
 }
 
 * {
