@@ -271,7 +271,7 @@ extension FolioReader {
             guard
                 let rawValue = self.defaults.value(forKey: kCurrentFontFamily) as? Int,
                 let font = FolioReaderFont(rawValue: rawValue) else {
-                    return .arial
+                    return .andada
             }
 
             return font

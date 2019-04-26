@@ -124,8 +124,6 @@
 		6F144CF22217F40100A641FB /* OpenDyslexicAlta-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CE12217F40000A641FB /* OpenDyslexicAlta-Bold.ttf */; };
 		6F144CF32217F40100A641FB /* OpenDyslexicMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CE22217F40100A641FB /* OpenDyslexicMono-Regular.ttf */; };
 		6F144CF42217F40100A641FB /* OpenDyslexicMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F144CE22217F40100A641FB /* OpenDyslexicMono-Regular.ttf */; };
-		6F5BF7232272CAE700899460 /* Dyslexie-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F5BF7222272CAE700899460 /* Dyslexie-Regular.ttf */; };
-		6F5BF7242272CAE700899460 /* Dyslexie-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F5BF7222272CAE700899460 /* Dyslexie-Regular.ttf */; };
 		B0D6990F1D035FA2003B4CCD /* FolioReaderKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B0D6990E1D035FA2003B4CCD /* FolioReaderKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0D699161D035FA2003B4CCD /* FolioReaderKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D6990B1D035FA2003B4CCD /* FolioReaderKit.framework */; };
 		B0D6991B1D035FA2003B4CCD /* FolioReaderKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D6991A1D035FA2003B4CCD /* FolioReaderKitTests.swift */; };
@@ -217,7 +215,6 @@
 		6F144CE02217F40000A641FB /* OpenDyslexic3-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenDyslexic3-Regular.ttf"; sourceTree = "<group>"; };
 		6F144CE12217F40000A641FB /* OpenDyslexicAlta-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenDyslexicAlta-Bold.ttf"; sourceTree = "<group>"; };
 		6F144CE22217F40100A641FB /* OpenDyslexicMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenDyslexicMono-Regular.ttf"; sourceTree = "<group>"; };
-		6F5BF7222272CAE700899460 /* Dyslexie-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dyslexie-Regular.ttf"; sourceTree = "<group>"; };
 		B0D6990B1D035FA2003B4CCD /* FolioReaderKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FolioReaderKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D6990E1D035FA2003B4CCD /* FolioReaderKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FolioReaderKit.h; sourceTree = "<group>"; };
 		B0D699101D035FA2003B4CCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -344,7 +341,6 @@
 		1A958F271D397BE900D56699 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				6F5BF7212272CA9600899460 /* Dyslexie */,
 				6F144CD32217F38000A641FB /* Open-Dyslexic */,
 				1A958F281D397BE900D56699 /* Andada */,
 				1A958F2D1D397BE900D56699 /* Lato */,
@@ -414,14 +410,6 @@
 				6F144CD42217F3C900A641FB /* OpenDyslexic-Bold.ttf */,
 			);
 			path = "Open-Dyslexic";
-			sourceTree = "<group>";
-		};
-		6F5BF7212272CA9600899460 /* Dyslexie */ = {
-			isa = PBXGroup;
-			children = (
-				6F5BF7222272CAE700899460 /* Dyslexie-Regular.ttf */,
-			);
-			path = Dyslexie;
 			sourceTree = "<group>";
 		};
 		B0D699011D035FA1003B4CCD = {
@@ -622,7 +610,6 @@
 				6F144CD82217F3D900A641FB /* OpenDyslexic-BoldItalic.ttf in Resources */,
 				6F144CF32217F40100A641FB /* OpenDyslexicMono-Regular.ttf in Resources */,
 				1A958FB71D397BE900D56699 /* Lato-Regular.ttf in Resources */,
-				6F5BF7232272CAE700899460 /* Dyslexie-Regular.ttf in Resources */,
 				1A9590121D397BE900D56699 /* Style.css in Resources */,
 				1A958FB01D397BE900D56699 /* Andada-Bold.otf in Resources */,
 				1A9590171D397CAF00D56699 /* FolioReaderKit.podspec in Resources */,
@@ -649,7 +636,6 @@
 				6F144CF02217F40100A641FB /* OpenDyslexic3-Regular.ttf in Resources */,
 				6F144CD62217F3C900A641FB /* OpenDyslexic-Bold.ttf in Resources */,
 				6F144CF22217F40100A641FB /* OpenDyslexicAlta-Bold.ttf in Resources */,
-				6F5BF7242272CAE700899460 /* Dyslexie-Regular.ttf in Resources */,
 				6F144CE62217F40100A641FB /* OpenDyslexicAlta-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

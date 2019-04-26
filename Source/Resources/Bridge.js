@@ -56,7 +56,6 @@ function setFontName(cls) {
     removeClass(elm, "arial");
     removeClass(elm, "helvetica");
     removeClass(elm, "opendyslexic");
-    removeClass(elm, "dyslexie");
     addClass(elm, cls);
 }
 
