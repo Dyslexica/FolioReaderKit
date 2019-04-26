@@ -15,6 +15,7 @@ public enum FolioReaderFont: Int {
 //    case lora
     case helvetica
     case opendyslexic
+    case dyslexie
 
     public static func folioReaderFont(fontName: String) -> FolioReaderFont? {
         var font: FolioReaderFont?
@@ -25,6 +26,7 @@ public enum FolioReaderFont: Int {
         case "arial": font = .arial
         case "helvetica": font = .helvetica
         case "opendyslexic": font = .opendyslexic
+        case "dyslexie": font = .dyslexie
         default: break
         }
         return font
@@ -38,6 +40,7 @@ public enum FolioReaderFont: Int {
         case .arial: return "arial"
         case .helvetica: return "helvetica"
         case .opendyslexic: return "opendyslexic"
+        case .dyslexie: return "dyslexie"
         }
     }
 }
@@ -185,13 +188,13 @@ class FolioReaderFontsMenu: UIViewController, SMSegmentViewDelegate, UIGestureRe
 
         fontName.addSegmentWithTitle("Andada", onSelectionImage: nil, offSelectionImage: nil)
         fontName.addSegmentWithTitle("Arial", onSelectionImage: nil, offSelectionImage: nil)
-        fontName.addSegmentWithTitle("Helvetica", onSelectionImage: nil, offSelectionImage: nil)
-        
+//        fontName.addSegmentWithTitle("Helvetica", onSelectionImage: nil, offSelectionImage: nil)
+        fontName.addSegmentWithTitle("Dyslexie", onSelectionImage: nil, offSelectionImage: nil)
         fontName.addSegmentWithTitle("OpenDyslexic", onSelectionImage: nil, offSelectionImage: nil)
         
 //        fontName.segments[0].titleFont = UIFont(name: "Andada", size: 18)!
         fontName.segments[1].titleFont = UIFont(name: "Arial", size: 18)!
-        fontName.segments[2].titleFont = UIFont(name: "Helvetica", size: 18)!
+        fontName.segments[2].titleFont = UIFont(name: "Dyslexie", size: 18)!
         fontName.segments[3].titleFont = UIFont(name: "OpenDyslexic", size: 18)!
 
         fontName.selectSegmentAtIndex(self.folioReader.currentFont.rawValue)

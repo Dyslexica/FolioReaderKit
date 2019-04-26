@@ -252,6 +252,7 @@ html.nightMode .highlight-underline {border-bottom: 2px solid rgba(240, 40, 20, 
 .helvetica, .helvetica p, .helvetica span, .helvetica div { font-family: "Helvetica", serif !important; color: var(--chosen-color)}
 .lora, .lora p, .lora span, .lora div { font-family: "Lora", sans-serif !important; color: var(--chosen-color)}
 .opendyslexic, .opendyslexic p, .opendyslexic span, .opendyslexic div { font-family: "OpenDyslexic", sans-serif !important; color: var(--chosen-color)}
+.dyslexie, .dyslexie p, .dyslexie span, .dyslexie div { font-family: "Dyslexie", sans-serif !important; color: var(--chosen-color)}
 
 html.textSizeOne, .textSizeOne body { font-size: 21px !important; }
 html.textSizeTwo, .textSizeTwo body { font-size: 27px !important; }
