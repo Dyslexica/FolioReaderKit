@@ -11,7 +11,6 @@ import UIKit
 public enum FolioReaderFont: Int {
     case arial = 0
     case andada
-//    case andada = 0
     case dyslexie
 //    case lato
 //    case lora
